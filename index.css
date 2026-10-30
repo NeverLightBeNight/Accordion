@@ -12,3 +12,47 @@ body {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
 }
+.container {
+  width: 700px;
+  height: auto;
+  box-shadow:  0 0 22px 5px rgba(0, 0, 0, .07);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 1);
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+
+.accordion__header button {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  background: rgb(157, 157, 212);
+  color: #fff;
+}
+
+.accordion__header p {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
