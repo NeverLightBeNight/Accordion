@@ -12,69 +12,66 @@ body {
   align-items: center;
   font-family: "Open Sans", sans-serif;
 }
+
 .container {
   width: 700px;
-  height: auto;
-  box-shadow: 0 0 22px 5px rgba(0, 0, 0, 0.07);
-  border-radius: 15px;
-  padding: 1rem 2rem;
+  min-height: auto;
+  box-shadow: 0 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
 }
 
 .accordion {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  background: #fff;
 }
 
-.accordion__header {
+.header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 1);
-  padding: 0.5rem 1rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding-inline: 2rem;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid rgba(0, 0, 0, .5);
 }
 
-.accordion__header button {
-  width: 120px;
-  height: 40px;
-  border-radius: 20px;
+.header p {
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.header button {
+  width: 100px;
+  height: 30px;
   border: none;
-  letter-spacing: 2px;
-  font-size: 20px;
   cursor: pointer;
-  background: rgb(157, 157, 212);
-  color: #fff;
-  position: relative;
-}
-
-.accordion__header p {
   letter-spacing: 2px;
-  font-weight: 600;
+  transition:
+    background 0.15s linear,
+    color 0.16s linear,
+    border-radius 0.18s linear;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-radius: 15px;
+  }
 }
 
-.accordion__in--info {
-  width: 100%;
-  min-height: 400px;
-  background: rgba(0, 0, 0, 0.1);
+.accordion__list {
   position: absolute;
+  flex-direction: column;
   top: 0;
-  z-index: -1;
   left: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+  line-height: 30px;
+  letter-spacing: 2px;
 }
 
-.accordion__in--info p {
-  line-height: 25px;
+.accordion__list.active {
+  display: block;
+  position: relative;
 }
